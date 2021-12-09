@@ -1,0 +1,11 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function(s) {
+    const half = s.split(' ')
+    
+    const change = half.filter(x => x !== '');
+    if (change[0] === undefined) {return 0}
+    return change[change.length-1].length
+};
