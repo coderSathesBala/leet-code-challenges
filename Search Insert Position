@@ -1,0 +1,17 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+ */
+var searchInsert = function(nums, target) {
+  for (i=0; i <= nums.length; i++) {
+      if (target === 0) {return 0}
+      if (target <= nums[i]) {
+          return i
+      }
+      if (target > nums[nums.length-1]) {
+          return nums.length
+      }
+  }  
+
+};
