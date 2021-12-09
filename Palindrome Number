@@ -1,0 +1,13 @@
+/**
+ * @param {number} x
+ * @return {boolean}
+ */
+var isPalindrome = function(x) {
+    const sewing = x.toString()
+    const half = sewing.split('')
+    const backwards = half.reverse()
+    const together = backwards.join()
+    const second = parseFloat(together.replace(/,/g, ''));
+    if (second === x) {return true
+    } else {return false} 
+};
