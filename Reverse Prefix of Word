@@ -1,0 +1,22 @@
+var reversePrefix = function(word, ch) {
+    const half = word.split('')
+    var brand = []
+    var other = []
+    var result = []
+    var count = 0
+    var whatIf = false;
+    for(i=0; i <= half.length; i++) {
+        count ++
+        if(half[i] === ch) {
+            whatIf = true;
+            brand = half.slice(0, count)
+            other = half.slice(count)
+            break;
+        }
+    }
+    for(i=brand.length-1; i>=0; i--) {
+        result.push(brand[i])
+    }    
+    const almost = result.concat(other).join('');
+    if(whatIf === true) {return almost} else {return word}
+};
