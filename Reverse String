@@ -1,0 +1,13 @@
+/**
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.
+ */
+var reverseString = function(s) {
+    let j = -1
+    const size = s.length-1
+    for(i=size; i>=0; i--) {
+        j++
+        s.push(s[i])
+    }
+    s.splice(0, size+1)
+};
