@@ -1,2 +1,0 @@
-# LeetCodeChallenges
-My LeetCode Challenges
