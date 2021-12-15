@@ -1,0 +1,13 @@
+/**
+ * @param {string} address
+ * @return {string}
+ */
+var defangIPaddr = function(address) {
+    const half = address.split('')
+    for(i=0; i<=half.length; i++) {
+        if(half[i] === '.') {
+            half[i] = '[.]'
+        }
+    }
+    return (half.join(''))
+};
