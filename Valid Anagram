@@ -1,0 +1,12 @@
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isAnagram = function(s, t) {
+    var halfS = s.split('').sort().join('')
+    var halfT = t.split('').sort().join('')
+    if(halfS === halfT) {
+        return true;
+    } else { return false;}
+};
