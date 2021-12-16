@@ -1,0 +1,15 @@
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
+var kidsWithCandies = function(candies, extraCandies) {
+    const highest = Math.max(...candies)
+    let arr = []
+    for(i=0; i<candies.length; i++) {
+        if(candies[i] + extraCandies < highest) {
+            arr.push(false)
+        } else (arr.push(true))
+    }
+    return arr
+};
