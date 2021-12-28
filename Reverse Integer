@@ -1,0 +1,19 @@
+/**
+ * @param {number} x
+ * @return {number}
+ */
+var reverse = function(x) {
+    const change = x.toString()
+    const half = change.split('')
+    var answer = []
+    if(half[0] === '-') {
+    answer.push(half[0])
+    half.splice(0, 1)
+    }
+    for(i=half.length-1; i>=0; i--) {
+    answer.push(half[i])
+    }
+    const together = answer.join('')
+    if (together <= -2147483647 || together >= 2147483647) { return 0 }
+    return together
+};
