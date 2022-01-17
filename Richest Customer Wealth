@@ -1,0 +1,14 @@
+/**
+ * @param {number[][]} accounts
+ * @return {number}
+ */
+var maximumWealth = function(accounts) {
+    let answer = 0
+    for(i=0; i<accounts.length; i++) {
+        const reducer = (previousValue, currentValue) => previousValue + currentValue;
+        if(accounts[i].reduce(reducer) > answer){
+            answer = accounts[i].reduce(reducer)
+        }
+    }
+    return answer
+};
