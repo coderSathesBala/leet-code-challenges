@@ -1,0 +1,14 @@
+/**
+ * @param {string[]} sentences
+ * @return {number}
+ */
+var mostWordsFound = function(sentences) {
+    let answer = 0
+    for(i=0; i<sentences.length; i++) {
+        let half = sentences[i].split(' ').length
+        if(half > answer) {
+            answer = half
+        }
+    }
+    return answer
+};
