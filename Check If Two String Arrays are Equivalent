@@ -1,0 +1,11 @@
+/**
+ * @param {string[]} word1
+ * @param {string[]} word2
+ * @return {boolean}
+ */
+var arrayStringsAreEqual = function(word1, word2) {
+    const word11 = word1.join('')
+    const word22= word2.join('')
+    if(word11 === word22){return true}
+    return false
+};
