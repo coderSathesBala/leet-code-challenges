@@ -1,0 +1,10 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findNumbers = function(nums) {
+    const change = nums.toString()
+    const halfs = change.split(',')
+    const liquidate = halfs.filter(half => half.length%2 == 0)
+    return liquidate.length
+};
