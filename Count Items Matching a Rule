@@ -1,0 +1,31 @@
+/**
+ * @param {string[][]} items
+ * @param {string} ruleKey
+ * @param {string} ruleValue
+ * @return {number}
+ */
+var countMatches = function(items, ruleKey, ruleValue) {
+    let sum = 0
+    if(ruleKey ==="type") {
+        for(i=0; i<items.length; i++) {
+            if(ruleValue === items[i][0]) {
+                sum++
+            }
+        }
+    }
+    if(ruleKey ==="color") {
+                for(i=0; i<items.length; i++) {
+            if(ruleValue === items[i][1]) {
+                sum++
+            }
+        }
+    }
+    if(ruleKey ==="name") {
+                for(i=0; i<items.length; i++) {
+            if(ruleValue === items[i][2]) {
+                sum++
+            }
+        }
+    }
+    return sum
+};
