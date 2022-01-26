@@ -1,0 +1,14 @@
+/**
+ * @param {number[]} gain
+ * @return {number}
+ */
+var largestAltitude = function(gain) {
+  let add = 0
+  let brand = 0
+  
+  for(i=0; i<gain.length; i++) {
+      add = add + gain[i]
+      if(add > brand) {brand = add} 
+  }
+    return brand
+};
