@@ -1,0 +1,10 @@
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var sortedSquares = function(nums) {
+    
+    const map1 = nums.map(num => num ** 2);
+    const answer = map1.sort(function (a, b) {  return a - b;  });
+    return answer
+};
