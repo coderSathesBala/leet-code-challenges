@@ -1,0 +1,16 @@
+/**
+ * @param {string} s
+ * @return {boolean}
+ */
+var checkString = function(s) {
+    const sHalf = s.split('')
+    let arr = []
+
+    for(i=0; i<sHalf.length; i++) {
+        if(sHalf[i] === 'b') {
+            arr = sHalf.splice(i, sHalf.length)
+        }
+    }
+    if(arr.includes('a')) {return false}
+    return true
+};
