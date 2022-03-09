@@ -1,0 +1,15 @@
+/**
+ * @param {string} s
+ * @return {string}
+ */
+var reverseWords = function(s) {
+    const sHalf = s.split(' ')
+    let brand = []
+    for(i=0; i<sHalf.length; i++) {
+        let connect = (sHalf[i].split('').reverse().join(''))
+        brand.push(connect)
+    if(i !== sHalf.length-1)
+        brand.push(' ')
+    }
+    return brand.join('')   
+};
