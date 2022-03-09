@@ -1,0 +1,20 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var balancedStringSplit = function(s) {
+    const sHalf = s.split('')
+    let r = 0
+    let l = 0
+    let answer = 0
+    for(i=0; i<sHalf.length; i++) {
+        if(sHalf[i] === 'R') {r++}
+        if(sHalf[i] === 'L') {l++}
+        if(r == l) {
+            answer++
+            r = 0
+            l = 0
+        }
+    }
+    return answer
+};
