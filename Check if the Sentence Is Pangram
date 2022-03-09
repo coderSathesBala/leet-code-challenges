@@ -1,0 +1,17 @@
+/**
+ * @param {string} sentence
+ * @return {boolean}
+ */
+var checkIfPangram = function(sentence) {
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    var organize = sentence.split('').sort()
+    for(i=0; i<organize.length; i++){
+        if(organize[i] === organize[i+1]) {
+            organize.splice(i, 1);
+            i--
+        }
+    }
+    console.log(organize)
+    if(organize.join('') === alphabet) {return true}
+    return false;
+};
