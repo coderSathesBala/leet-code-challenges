@@ -1,0 +1,15 @@
+/**
+ * @param {string[]} words
+ * @return {string}
+ */
+var firstPalindrome = function(words) {
+    let question = 'ok'
+    
+    for(i=0; i<words.length; i++){
+       question = words[i].split('').reverse().join('')
+     if(words[i] === question) {
+        return question
+     }
+    }
+    return ""
+};
