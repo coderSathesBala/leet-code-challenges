@@ -1,0 +1,18 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var countGoodSubstrings = function(s) {
+    const sHalf = s.split('')
+    let arr = []
+    for(i=0, j=1, k=2;i<sHalf.length-2;i++,j++,k++){
+        if(
+            sHalf[i] !== sHalf[j] && 
+            sHalf[i] !== sHalf[k] &&
+            sHalf[j] !== sHalf[k]
+        ) {
+        arr.push([sHalf[i], sHalf[j], sHalf[k]].join(''))
+        }
+    }
+    return arr.length
+};
